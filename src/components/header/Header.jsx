@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './Header.module.css'
 import { RiMenu2Fill } from 'react-icons/ri'
 import { IoCloseSharp, IoSearch } from 'react-icons/io5'
@@ -147,7 +147,32 @@ function Header() {
             ]
         }
     ];
-    
+    const [menuOpened, setMenuOpened] = useState(false);
+    const [activeDropdown, setActiveDropdown] = useState(null);
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    const toggleMenuButton = () => {
+        setMenuOpened(!menuOpened);
+    };
+
+    const toggleDropdown = (index) => {
+        setActiveDropdown((prev) => (prev === index ? null : index));
+    };
+
+    useEffect(() => {
+
+        // Handle window resize to remove inline styles for larger screens
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+
+    }, []);
 
     useEffect(() => {
 
@@ -159,12 +184,6 @@ function Header() {
         const accountButton = document.querySelector(`.${styles.show_account_dropdown_button}`);
         const accountDropdown = document.querySelector(`.${styles.navbar_account_dropdown}`);
         const closeAccountDropdown = document.querySelector(`.${styles.close_account_dropdown}`);
-
-        // Toggle Navbar Menu
-        toggleMenuButton.addEventListener('click', () => {
-            menu.classList.toggle(styles.show_menu);
-            toggleMenuButton.classList.toggle(styles.show_icon);
-        });
 
         // Toggle Search Dropdown
         searchButton.addEventListener('click', () => {
@@ -194,12 +213,23 @@ function Header() {
 
     }, []);
 
+    useEffect(() => {
+        console.log(screenWidth)
+        const dropdownItems = document.querySelectorAll(`.${styles.dropdown__item}`);
+        if (screenWidth > 1200) {
+            dropdownItems.forEach((item) => {
+                const dropdownContainer = item.querySelector(`.${styles.dropdown__container}`);
+                dropdownContainer.removeAttribute('style');
+            });
+        }
+    }, [screenWidth])
+
     return (
         <header className={styles.header_main}>
             <nav className={styles.navbar_main}>
 
                 <div className={styles.navbar_data}>
-                    <div id={styles.navbar_toggle}>
+                    <div id={styles.navbar_toggle} className={`${menuOpened && styles.show_icon}`} onClick={toggleMenuButton}>
                         <RiMenu2Fill className={styles.navbar_toggle_menu} />
                         <IoCloseSharp className={styles.navbar_toggle_close} />
                     </div>
@@ -208,43 +238,34 @@ function Header() {
                     </a>
                 </div>
 
-                <div className={styles.navbar_menu} id={styles.navbar_menu}>
+                <div className={`${styles.navbar_menu} ${menuOpened && styles.show_menu}`} id={styles.navbar_menu}>
                     <ul className={styles.navbar_list}>
-
                         {dropdownData.map((category, index) => (
-
-                            <li className={styles.dropdown__item} key={index}>
-                                <div className={`${styles.nav__link} ${styles.dropdown__button}`}>
+                            <li className={`${styles.dropdown__item} ${activeDropdown === index ? styles.show_dropdown : ''}`} key={index}>
+                                <div className={`${styles.nav__link} ${styles.dropdown__button}`} onClick={() => toggleDropdown(index)}>
                                     {category.title}
                                 </div>
 
-                                <div className={styles.dropdown__container}>
+                                <div className={styles.dropdown__container} style={{ height: activeDropdown === index ? 'auto' : '0' }}>
                                     <div className={styles.dropdown__content}>
-
                                         {category.groups.map((group, i) => (
-
                                             <div className={styles.dropdown__group} key={i}>
                                                 <span className={styles.dropdown__title}>{group.groupTitle}</span>
                                                 <ul className={styles.dropdown__list}>
-
                                                     {group.items.map((item, j) => (
                                                         <li key={j}>
-                                                            <a href={item.link} className={styles.dropdown__link}>{item.name}</a>
+                                                            <a href={item.link} className={styles.dropdown__link}>
+                                                                {item.name}
+                                                            </a>
                                                         </li>
                                                     ))}
-                                                    
                                                 </ul>
                                             </div>
-
                                         ))}
-
                                     </div>
                                 </div>
-
                             </li>
-
                         ))}
-
                     </ul>
                 </div>
 
