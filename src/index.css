@@ -1,8 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
+  font-family: "Montserrat", serif;
   color-scheme: light dark;
   color: #213547;
   background-color: #ffffff;
@@ -12,8 +9,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-
-  --font-family: 'DM Sans', sans-serif;
   --font-size-1: 24px;
   --font-size-2: 23px;
   --font-size-3: 21px;
@@ -38,7 +33,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: var(--font-family);
+  font-family: "Montserrat", serif;
   -webkit-tap-highlight-color: transparent;
   /* auto background color on mobile press */
 }

@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Header.module.css'
-import { RiMenu2Fill } from 'react-icons/ri'
-import { IoCloseSharp, IoSearch } from 'react-icons/io5'
+import { AiOutlineClose } from "react-icons/ai";
+import { CiSearch, CiUser, CiMenuFries } from "react-icons/ci";
 import { FaShopware } from 'react-icons/fa'
-import { GrFavorite } from 'react-icons/gr'
-import { PiShoppingCart } from 'react-icons/pi'
-import { VscAccount } from 'react-icons/vsc'
+import { PiHeartStraightLight, PiHandbagLight, PiUserCircleLight, PiUserLight  } from 'react-icons/pi'
 
 function Header() {
 
@@ -224,8 +222,8 @@ function Header() {
 
                 <div className={styles.navbar_data}>
                     <div id={styles.navbar_toggle} className={`${menuOpened && styles.show_icon}`} onClick={toggleMenuButton}>
-                        <RiMenu2Fill className={styles.navbar_toggle_menu} />
-                        <IoCloseSharp className={styles.navbar_toggle_close} />
+                        <CiMenuFries  className={styles.navbar_toggle_menu} />
+                        <AiOutlineClose className={styles.navbar_toggle_close} />
                     </div>
                     <a href="/e-commerce-frontend/home/home.html" className={styles.navbar_logo}>
                         <FaShopware /> E-MART
@@ -267,14 +265,14 @@ function Header() {
                     <div id={styles.navbar_profile_search} className={styles.navbar_profile_child}>
                         <div id={styles.navbar_search_icon} className={styles.navbar_profile_child_title}>
                             <div className={styles.show_search_dropdown_button} onClick={() => { toggleSearchbarDropdown(true) }}></div>
-                            <IoSearch className={styles.navbar_profile_icons} />
+                            <CiSearch className={styles.navbar_profile_icons} />
                         </div>
                         <div className={`${styles.navbar_search_dropdown} ${isSearchbarOpened && styles.visible_dropdown}`}>
                             <div className={styles.close_search_dropdown} onClick={() => { toggleSearchbarDropdown(false); }}></div>
                             <div className={styles.main_nav_search_container}>
                                 <div id={styles.search_bar_input_container}>
                                     <input type="text" id={styles.search_bar_input} placeholder="Search for products, brands and more" />
-                                    <IoSearch id={styles.navbar_search_dropdown_icon} />
+                                    <CiSearch id={styles.navbar_search_dropdown_icon} />
                                 </div>
                                 <div id={styles.search_suggetion}>
                                     <span className={styles.nav_search_suggessions}>jeans</span>
@@ -286,19 +284,19 @@ function Header() {
                     <div className={styles.navbar_profile_child}>
                         <div className={styles.navbar_profile_child_title}>
                             <a className={styles.show_wishlist_dropdown_button} href="/e-commerce-frontend/wishlist/wishlist.html"></a>
-                            <GrFavorite className={styles.navbar_profile_icons} />
+                            <PiHeartStraightLight  className={styles.navbar_profile_icons} />
                         </div>
                     </div>
                     <div className={styles.navbar_profile_child}>
                         <div className={styles.navbar_profile_child_title}>
                             <a className={styles.show_cart_dropdown_button} href="/e-commerce-frontend/cart/cart.html"></a>
-                            <PiShoppingCart className={styles.navbar_profile_icons} />
+                            <PiHandbagLight className={styles.navbar_profile_icons} />
                         </div>
                     </div>
                     <div id={styles.navbar_profile_account} className={styles.navbar_profile_child}>
                         <div id={styles.navbar_account_icon} className={styles.navbar_profile_child_title}>
                             <div className={styles.show_account_dropdown_button} onClick={() => { toggleAccountDropdown(true); }}></div>
-                            <VscAccount className={styles.navbar_profile_icons} />
+                            <CiUser className={styles.navbar_profile_icons} size={24} style={{fontWeight: 'bolder'}}/>
                         </div>
                         <div className={`${styles.navbar_account_dropdown} ${isAccountOpened && styles.visible_dropdown}`}>
                             <div className={styles.close_account_dropdown} onClick={() => { toggleAccountDropdown(false); }}></div>
