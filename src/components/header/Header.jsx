@@ -148,6 +148,8 @@ function Header() {
         }
     ];
     const [menuOpened, setMenuOpened] = useState(false);
+    const [isSearchbarOpened, setIsSearchbarOpened] = useState(false);
+    const [isAccountOpened, setIsAccountOpened] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
@@ -155,9 +157,16 @@ function Header() {
         setMenuOpened(!menuOpened);
     };
 
-    const toggleDropdown = (index) => {
+    const toggleMenuOptionsDropdown = (index) => {
         setActiveDropdown((prev) => (prev === index ? null : index));
     };
+
+    const toggleSearchbarDropdown = (bool) => {
+        setIsSearchbarOpened(bool);
+    }
+    const toggleAccountDropdown = (bool) => {
+        setIsAccountOpened(bool);
+    }
 
     useEffect(() => {
 
@@ -176,23 +185,11 @@ function Header() {
 
     useEffect(() => {
 
-        const toggleMenuButton = document.getElementById(styles.navbar_toggle);
-        const menu = document.getElementById(styles.navbar_menu);
-        const searchButton = document.querySelector(`.${styles.show_search_dropdown_button}`);
-        const searchDropdown = document.querySelector(`.${styles.navbar_search_dropdown}`);
-        const closeSearchDropdown = document.querySelector(`.${styles.close_search_dropdown}`);
         const accountButton = document.querySelector(`.${styles.show_account_dropdown_button}`);
         const accountDropdown = document.querySelector(`.${styles.navbar_account_dropdown}`);
         const closeAccountDropdown = document.querySelector(`.${styles.close_account_dropdown}`);
 
-        // Toggle Search Dropdown
-        searchButton.addEventListener('click', () => {
-            searchDropdown.classList.add(styles.active);
-        });
-
-        closeSearchDropdown.addEventListener('click', () => {
-            searchDropdown.classList.remove(styles.active);
-        });
+    
 
         // Toggle Account Dropdown
         accountButton.addEventListener('click', () => {
@@ -204,9 +201,6 @@ function Header() {
         });
 
         return () => {
-            toggleMenuButton.removeEventListener('click', null);
-            searchButton.removeEventListener('click', null);
-            closeSearchDropdown.removeEventListener('click', null);
             accountButton.removeEventListener('click', null);
             closeAccountDropdown.removeEventListener('click', null);
         };
@@ -242,7 +236,7 @@ function Header() {
                     <ul className={styles.navbar_list}>
                         {dropdownData.map((category, index) => (
                             <li className={`${styles.dropdown__item} ${activeDropdown === index ? styles.show_dropdown : ''}`} key={index}>
-                                <div className={`${styles.nav__link} ${styles.dropdown__button}`} onClick={() => toggleDropdown(index)}>
+                                <div className={`${styles.nav__link} ${styles.dropdown__button}`} onClick={() => toggleMenuOptionsDropdown(index)}>
                                     {category.title}
                                 </div>
 
@@ -272,11 +266,11 @@ function Header() {
                 <section id={styles.navbar_profile}>
                     <div id={styles.navbar_profile_search} className={styles.navbar_profile_child}>
                         <div id={styles.navbar_search_icon} className={styles.navbar_profile_child_title}>
-                            <div className={styles.show_search_dropdown_button}></div>
+                            <div className={styles.show_search_dropdown_button} onClick={() => { toggleSearchbarDropdown(true) }}></div>
                             <IoSearch className={styles.navbar_profile_icons} />
                         </div>
-                        <div className={styles.navbar_search_dropdown}>
-                            <div className={styles.close_search_dropdown}></div>
+                        <div className={`${styles.navbar_search_dropdown} ${isSearchbarOpened && styles.visible_dropdown}`}>
+                            <div className={styles.close_search_dropdown} onClick={() => { toggleSearchbarDropdown(false); }}></div>
                             <div className={styles.main_nav_search_container}>
                                 <div id={styles.search_bar_input_container}>
                                     <input type="text" id={styles.search_bar_input} placeholder="Search for products, brands and more" />
@@ -303,11 +297,11 @@ function Header() {
                     </div>
                     <div id={styles.navbar_profile_account} className={styles.navbar_profile_child}>
                         <div id={styles.navbar_account_icon} className={styles.navbar_profile_child_title}>
-                            <div className={styles.show_account_dropdown_button}></div>
+                            <div className={styles.show_account_dropdown_button} onClick={() => { toggleAccountDropdown(true); }}></div>
                             <VscAccount className={styles.navbar_profile_icons} />
                         </div>
-                        <div className={styles.navbar_account_dropdown}>
-                            <div className={styles.close_account_dropdown}></div>
+                        <div className={`${styles.navbar_account_dropdown} ${isAccountOpened && styles.visible_dropdown}`}>
+                            <div className={styles.close_account_dropdown} onClick={() => { toggleAccountDropdown(false); }}></div>
                             <div className={styles.main_nav_account_container}>
                                 <a href="/e-commerce-frontend/signin/signin.html" id={styles.navbar_account_dropdown_login} className={styles.dropList}>LOGIN/SIGNUP</a>
                                 <a href="#" className={styles.dropList} id={styles.navbar_account_dropdown_account}></a>
