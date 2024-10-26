@@ -16,7 +16,6 @@
     --font-size: 12px;
     --font-size-md: 14px;
     --font-size-lg: 18px;
-    --font-family: 'DM Sans', sans-serif;
     --font-weight: 400;
     --main-navbar-width: 100rem;
     --product-card-width: 250px;
@@ -49,7 +48,6 @@
     font-weight: var(--font-weight);
     color: var(--dark-gray);
 }
-
 a {
     text-decoration: none;
     color: var(--dark-gray);
@@ -491,11 +489,9 @@ a {
     gap: 5px;
 }
 
-.product__wishlist .wishlist__icon {
-    font-size: var(--font-size-lg);
-    color: var(--gray);
+.product__wishlist .addToWishlist {
+    color: #2f2f2f;
     cursor: pointer;
-    font-variation-settings: 'FILL' 0;
     transition: all .3s ease-in-out;
 }
 
