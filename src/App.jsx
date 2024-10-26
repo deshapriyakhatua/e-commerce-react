@@ -5,7 +5,9 @@ import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Header from './components/header/Header'
 import Home from './pages/home/Home'
+import Product from './pages/product/Product'
 import Footer from './components/footer/Footer'
+import Products from './pages/products/Products'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,7 +16,7 @@ function App() {
     <BrowserRouter>
       
       <Header />
-
+      
       <Suspense
         fallback={
           <div className="pt-3 text-center">
@@ -24,8 +26,9 @@ function App() {
       >
         <Routes>
           <Route path="/" name="Home" element={<Home />} />
-          {/* <Route exact path="/services" name="Services" element={<Services />} />
-          <Route exact path="/pricing" name="Pricing" element={<Pricing />} />
+          <Route exact path="/product" name="Product" element={<Product />} />
+          <Route exact path="/products" name="Products" element={<Products />} />
+          {/* <Route exact path="/pricing" name="Pricing" element={<Pricing />} />
           <Route exact path="/blogs/*" name="Blogs" element={<Blog />} />
           <Route exact path="/about" name="About" element={<About />} />
           <Route exact path="/contact" name="Contact" element={<Contact />} />
