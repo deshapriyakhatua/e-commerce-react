@@ -5,7 +5,7 @@ import { FaOpencart } from 'react-icons/fa';
 import { IoStarHalfOutline } from 'react-icons/io5';
 import { RiCloseLargeFill } from 'react-icons/ri';
 
-function Product() {
+function Product() { 
 
     const productImages = [
         { url: 'https://apisap.fabindia.com/medias/20174793-01.jpg?context=bWFzdGVyfGltYWdlc3wxNjMzMDJ8aW1hZ2UvanBlZ3xhREF5TDJnMU1pODFNakl4T1Rnd01UZ3lPVFF3Tmk4eU1ERTNORGM1TTE4d01TNXFjR2N8YmZkMWQ4YWRlMDM3YjMxMTAxYjQ3ZGJlZmUxYjQyNjM4NTgxZmI2MTNhM2ZmOTIzZTdjN2YzYmQ1MDc1N2EyMA', alt: '' },
