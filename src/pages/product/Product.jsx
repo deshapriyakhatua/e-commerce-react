@@ -3,7 +3,6 @@ import styles from './Product.module.css'
 import { PiHandbagLight, PiHeartStraightLight } from 'react-icons/pi'
 import { FaOpencart } from 'react-icons/fa';
 import { IoStarHalfOutline } from 'react-icons/io5';
-import ImageZoom from "react-image-zooom";
 import { RiCloseLargeFill } from 'react-icons/ri';
 
 function Product() {
