@@ -14,7 +14,7 @@ function Header() {
                 {
                     groupTitle: 'Home Appliances',
                     items: [
-                        { name: 'Washing Machines & Dryers', link: '/e-commerce-frontend/products/products.html?category=t-shirt' },
+                        { name: 'Washing Machines & Dryers', link: '/products' },
                         { name: 'Air Conditioner', link: '#' },
                         { name: 'Fans & Air Coolers', link: '#' },
                         { name: 'Refrigerators & freezers', link: '#' },
@@ -204,7 +204,7 @@ function Header() {
                             <CiMenuFries className={styles.navbar_toggle_menu} />
                             <AiOutlineClose className={styles.navbar_toggle_close} />
                         </div>
-                        <a href="/e-commerce-frontend/home/home.html" className={styles.navbar_logo}>
+                        <a href="/" className={styles.navbar_logo}>
                             <FaShopware /> E-MART
                         </a>
                     </div>
@@ -268,7 +268,7 @@ function Header() {
                         </div>
                         <div className={styles.navbar_profile_child}>
                             <div className={styles.navbar_profile_child_title}>
-                                <a className={styles.show_cart_dropdown_button} href="/e-commerce-frontend/cart/cart.html"></a>
+                                <a className={styles.show_cart_dropdown_button} href="/cart"></a>
                                 <PiHandbagLight className={styles.navbar_profile_icons} />
                             </div>
                         </div>
@@ -285,7 +285,6 @@ function Header() {
                                     <a href="#" className={styles.dropList}>Orders</a>
                                     <a href="#" className={styles.dropList}>Coupons</a>
                                     <a href="#" className={styles.dropList}>Saved Address</a>
-                                    <a href="/e-commerce-frontend/admin/home/home.html" className={styles.dropList}>Admin</a>
                                 </div>
                             </div>
                         </div>

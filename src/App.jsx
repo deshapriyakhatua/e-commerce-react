@@ -8,6 +8,7 @@ import Home from './pages/home/Home'
 import Product from './pages/product/Product'
 import Footer from './components/footer/Footer'
 import Products from './pages/products/Products'
+import Cart from './pages/cart/Cart'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -28,8 +29,8 @@ function App() {
           <Route path="/" name="Home" element={<Home />} />
           <Route exact path="/product" name="Product" element={<Product />} />
           <Route exact path="/products" name="Products" element={<Products />} />
-          {/* <Route exact path="/pricing" name="Pricing" element={<Pricing />} />
-          <Route exact path="/blogs/*" name="Blogs" element={<Blog />} />
+          <Route exact path="/cart" name="Cart" element={<Cart />} />
+          {/* <Route exact path="/blogs/*" name="Blogs" element={<Blog />} />
           <Route exact path="/about" name="About" element={<About />} />
           <Route exact path="/contact" name="Contact" element={<Contact />} />
           <Route exact path="/admin" name="Login" element={<Auth />} />
