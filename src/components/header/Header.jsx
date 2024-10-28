@@ -182,7 +182,7 @@ function Header() {
     }, []);
 
     useEffect(() => {
-        console.log(screenWidth)
+        // console.log(screenWidth)
         const dropdownItems = document.querySelectorAll(`.${styles.dropdown__item}`);
         if (screenWidth > 1200) {
             dropdownItems.forEach((item) => {

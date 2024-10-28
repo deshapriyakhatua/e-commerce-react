@@ -43,7 +43,7 @@ footer {
 
 .footer {
   width: 100%;
-  background: #fafafa;
+  background: #efefef;
 }
 
 .footer .footer_row {
@@ -75,7 +75,8 @@ footer {
 .footer_col .footer_col_list_parent .footer_col_lists .footer_col_links {
   text-decoration: none;
   font-size: var(--small-font-size);
-  color: #797979;
+  color: #595959;
+  font-weight: 500;
 }
 
 .footer_col .footer_col_list_parent .footer_col_lists .footer_col_links:hover {
@@ -84,7 +85,7 @@ footer {
 
 .footer_col p {
   margin: 20px 0;
-  color: #5f5f5f;
+  color: #5e5e5e;
   max-width: 300px;
 }
 

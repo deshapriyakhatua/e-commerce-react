@@ -25,6 +25,8 @@
   --color-hover: black;
   --nav-z-index: 100;
   --main-navbar-width: 1600px;
+  --button-background: #e46e6e;
+  
 }
 
 * {

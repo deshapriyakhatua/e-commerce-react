@@ -5,7 +5,7 @@
 .contentContainer {
     max-width: 100rem;
     margin: auto;
-    padding: 50px 0;
+    padding: 0px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,8 +36,8 @@
 
 .desc {
     font-size: 18px;
-    font-weight: 500;
-    color: #787878;
+    font-weight: 600;
+    color: #535353;
 }
 
 .imgContainer {
