@@ -250,6 +250,18 @@
     .main_cart_section .card_details_child .edit_button_parent .move_to_wishlist_button_text {
         display: none;
     }
+    
+}
+@media screen and (max-width: 500px) {
+    .checkout_details_row {
+        position: fixed;
+        bottom: 0;
+        background-color: white;
+        padding: 0px 10px 20px;
+    }
+    .checkout_button {
+        margin-top: 0;
+    }
 }
 @media screen and (max-width: 425px) {
     .main_cart_section .card {

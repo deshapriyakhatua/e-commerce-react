@@ -13,8 +13,33 @@ function SimpleCarousel() {
         "https://fabriclore.com/cdn/shop/articles/Blog-Banner-for-regular-blog_11.jpg?v=1657273299&width=1000"
     ];
 
+    const mobImages = [
+        "https://i.pinimg.com/736x/98/f8/b4/98f8b4e72c6023a2a15dfdab64a1a80c.jpg",
+        "https://i.pinimg.com/236x/0e/59/c8/0e59c802d2cd95bb56f70c16262001d9.jpg",
+        "https://i.pinimg.com/736x/8b/64/39/8b6439bc5803f7bd324018a13cd22d64.jpg",
+        "https://i.pinimg.com/736x/14/fa/eb/14faebf0452f997bbed5ba943cd57a34.jpg",
+        "https://imgs-aashniandco.gumlet.io/pub/media/catalog/product/cache/9306e52ccddca80c1fb471fb66a6193f/s/a/sacgh000820_c_.jpg",
+        "https://assets.vogue.in/photos/63c4cf8b0b73d722037aef02/2:3/w_2560%2Cc_limit/Sabyasachi%2520Heritage%2520Bridal%25202023%2520(3).jpg"
+    ]
+
     const nextSlide = () => setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
     const prevSlide = () => setCurrentSlide((prevSlide) => (prevSlide - 1 + images.length) % images.length);
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+
+        // Handle window resize to remove inline styles for larger screens
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+
+    }, []);
 
     useEffect(() => {
         const interval = setInterval(nextSlide, 5000);
@@ -25,7 +50,7 @@ function SimpleCarousel() {
         <div className={styles.mainContainer}>
             <div className={styles.carousel}>
                 <ul className={styles.slides}>
-                    {images.map((image, index) => (
+                    {images && (screenWidth < 768 ?mobImages :images).map((image, index) => (
                         <li
                             key={index}
                             className={`${styles.slideContainer} ${index === currentSlide ? styles.active : ''}`}
@@ -42,7 +67,7 @@ function SimpleCarousel() {
                     <button onClick={nextSlide} className={styles.nextSlide}>&rsaquo;</button>
                 </div>
                 <div className={styles.carouselDots}>
-                    {images.map((_, index) => (
+                    {images && (screenWidth < 768 ?mobImages :images).map((_, index) => (
                         <button
                             key={index}
                             onClick={() => setCurrentSlide(index)}

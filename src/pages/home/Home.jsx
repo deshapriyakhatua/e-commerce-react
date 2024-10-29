@@ -8,7 +8,7 @@ import StyledBanner from '../../components/home/styledBanner/StyledBanner'
 import CarouselTextImage from '../../components/home/carouselTextImage/CarouselTextImage'
 import ProductsSection from '../../components/home/productsSection/ProductsSection'
 import GridBanners from '../../components/home/gridBanners/GridBanners'
-import SimpleCarousel from '../../components/home/testimonialCarousel/SimpleCarousel'
+import SimpleCarousel from '../../components/home/simpleCarousel/SimpleCarousel'
 
 function Home() {
   return (
