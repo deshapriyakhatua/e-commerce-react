@@ -7,10 +7,34 @@ function CarouselTextImage() {
 
     const slides = [
         {
+            title: 'Looking For Best Price',
+            subtitle: 'New Fashion',
+            desc: 'Summer Collections Up To 70% Off The Entrire Store! Made With Love',
+            imgSrc: 'https://ethnicartsofindia.com/cdn/shop/files/11_1.jpg?v=1715773884&width=2048'
+        },
+        {
+            title: 'Autumn Winter Collections',
+            subtitle: 'New Fashion',
+            desc: 'Summer Collections Up To 70% Off The Entrire Store! Made With Love',
+            imgSrc: 'https://blueparrotstudio.in/wp-content/uploads/2021/01/b1d04282200537.5d15f3c281af8-1024x682.jpg'
+        },
+        {
             title: 'Spring Summer Collection',
             subtitle: 'New Fashion',
             desc: 'Summer Collections Up To 70% Off The Entrire Store! Made With Love',
             imgSrc: 'https://indiantextilejournal.com/wp-content/uploads/Indian-Terrain-Sweatshirt-1.jpg'
+        },
+        {
+            title: 'Spring Summer Collection',
+            subtitle: 'New Fashion',
+            desc: 'Summer Collections Up To 70% Off The Entrire Store! Made With Love',
+            imgSrc: 'https://dhunkifashion.com/wp-content/uploads/2020/05/history-of-indian-ethnic-wear-1.jpg'
+        },
+        {
+            title: 'Spring Summer Collection',
+            subtitle: 'New Fashion',
+            desc: 'Summer Collections Up To 70% Off The Entrire Store! Made With Love',
+            imgSrc: 'https://www.noblehousecreations.net/wp-content/uploads/2020/09/bridal-lehnga.jpg'
         },
         {
             title: 'Autumn Winter Collections',
@@ -19,22 +43,10 @@ function CarouselTextImage() {
             imgSrc: 'https://scontent.fccu31-2.fna.fbcdn.net/v/t39.30808-6/437485193_10160871435620399_2779281639270164576_n.jpg?stp=dst-jpg_s960x960&_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=O14wd0LGxdMQ7kNvgFJTcHF&_nc_zt=23&_nc_ht=scontent.fccu31-2.fna&_nc_gid=AkaUkJEQjN1p8ZadaijoCNo&oh=00_AYAFGG6RRWgWKrFchjhiLdW8c_n5fc-cc9N9bjAWEeRuEg&oe=6725539C'
         },
         {
-            title: 'Looking For Best Price',
-            subtitle: 'New Fashion',
-            desc: 'Summer Collections Up To 70% Off The Entrire Store! Made With Love',
-            imgSrc: 'https://www.dfupublications.com/images/2022/11/30/Indian%20Terrain%20launches%20winter%20wear_large.jpg'
-        },
-        {
-            title: 'Autumn Winter Collections',
-            subtitle: 'New Fashion',
-            desc: 'Summer Collections Up To 70% Off The Entrire Store! Made With Love',
-            imgSrc: 'https://fashionsuggest.in/wp-content/uploads/india-fashion-industry-analysis-banner-feat-Ajay2-compressed-1021x515.jpg'
-        },
-        {
             title: 'Spring Summer Collection',
             subtitle: 'New Fashion',
             desc: 'Summer Collections Up To 70% Off The Entrire Store! Made With Love',
-            imgSrc: 'https://theindianthreads.com/cdn/shop/articles/TTTTT.png?v=1712317224&width=1100'
+            imgSrc: 'https://t3.ftcdn.net/jpg/08/31/95/10/360_F_831951050_8uoXdDzKx5bGxw29psVPlGVWLAQpYEjp.jpg'
         },
     ]
     const totalSlides = slides.length; 

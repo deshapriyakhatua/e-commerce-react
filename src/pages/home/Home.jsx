@@ -7,6 +7,7 @@ import SingleBannerProduct from '../../components/home/singleBannerProduct/Singl
 import StyledBanner from '../../components/home/styledBanner/StyledBanner'
 import CarouselTextImage from '../../components/home/carouselTextImage/CarouselTextImage'
 import ProductsSection from '../../components/home/productsSection/ProductsSection'
+import GridBanners from '../../components/home/gridBanners/GridBanners'
 
 function Home() {
   return (
@@ -17,7 +18,9 @@ function Home() {
       <ProductsSection />
       <StyledBanner />
       <SingleBanner />
+      <GridBanners />
       <BannerTag />
+      <ProductsSection />
     </div>
   )
 }
