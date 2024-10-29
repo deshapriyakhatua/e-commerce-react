@@ -8,16 +8,19 @@ import StyledBanner from '../../components/home/styledBanner/StyledBanner'
 import CarouselTextImage from '../../components/home/carouselTextImage/CarouselTextImage'
 import ProductsSection from '../../components/home/productsSection/ProductsSection'
 import GridBanners from '../../components/home/gridBanners/GridBanners'
+import SimpleCarousel from '../../components/home/testimonialCarousel/SimpleCarousel'
 
 function Home() {
   return (
     <div className={styles.homeContainer}>
+      <SimpleCarousel />
+      <SingleBanner />
+      <ProductsSection />
       <CarouselTextImage />
       <BannerCards />
       <SingleBannerProduct />
       <ProductsSection />
       <StyledBanner />
-      <SingleBanner />
       <GridBanners />
       <BannerTag />
       <ProductsSection />

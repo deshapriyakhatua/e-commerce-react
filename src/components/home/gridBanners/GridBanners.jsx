@@ -46,7 +46,7 @@ function GridBanners() {
         },
     ]
     return (
-        <div className={styles.mainContainer}>
+        <section className={styles.mainContainer}>
             <div className={styles.headingContainer}>
                 <h1>Recent Blog Posts</h1>
                 <p>Read Our Recent Blogs. Stay Updated with trends</p>
@@ -61,7 +61,7 @@ function GridBanners() {
                 ))}
 
             </div>
-        </div>
+        </section>
     )
 }
 

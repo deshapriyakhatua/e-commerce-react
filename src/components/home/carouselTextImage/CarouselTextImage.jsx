@@ -52,13 +52,19 @@ function CarouselTextImage() {
     const totalSlides = slides.length; 
 
     const handleNext = () => {
-        const nextSlide = (currentSlide + 1) % totalSlides;
-        setSlide(currentSlide, nextSlide);
+        setCurrentSlide((prevSlide) => {
+            const nextSlide = (prevSlide + 1) % totalSlides;
+            setSlide(prevSlide, nextSlide);
+            return nextSlide;
+        });
     };
 
     const handlePrev = () => {
-        const prevSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        setSlide(currentSlide, prevSlide);
+        setCurrentSlide((prevSlide) => {
+            const prev = (prevSlide - 1 + totalSlides) % totalSlides;
+            setSlide(prevSlide, prev);
+            return prev;
+        });
     };
 
     const setSlide = (prev, next) => {
@@ -68,7 +74,6 @@ function CarouselTextImage() {
         if (carouselItemsRef.current[next]) {
             carouselItemsRef.current[next].classList.add(styles.active);
         }
-        setCurrentSlide(next);
     };
 
     useEffect(() => {
@@ -80,10 +85,10 @@ function CarouselTextImage() {
     useEffect(() => {
         const interval = setInterval(handleNext, 5000);
         return () => clearInterval(interval);
-    }, [currentSlide])
+    }, [])
 
     return (
-        <div className={styles.mainContainer}>
+        <section className={styles.mainContainer}>
             <div className={styles.carousel}>
                 <div className={styles.carousel__nav}>
                     <span onClick={handlePrev} className={styles.carousel__arrow}>
@@ -119,7 +124,7 @@ function CarouselTextImage() {
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     );
 }
 

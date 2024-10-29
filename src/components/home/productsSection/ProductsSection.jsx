@@ -53,8 +53,8 @@ function ProductsSection() {
             <p className={styles.desc}>Explore All Trendy Products From Our Store</p>
         </div>
         <div className={styles.productsSection}>
-            {products && products.map((elem) => (
-                <div className={styles.card}>
+            {products && products.map((elem, indx) => (
+                <div className={styles.card} key={indx}>
                     <div className={styles.imageContainer} style={{backgroundImage: `url('${elem.imgSrc1}')`}}>
                         <span className={styles.discount}>{elem.discount}</span>
                         <img src={elem.imgSrc}/>
