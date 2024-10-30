@@ -160,7 +160,8 @@
     font-size: 1rem;
     font-weight: 600;
     border-width: 0;
-    background-color: rgb(226, 141, 71);
+    border-radius: 5px;
+    background-color: var(--button-background);
     color: white;
     cursor: pointer;
 }

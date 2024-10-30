@@ -3,8 +3,12 @@ import styles from './Cart.module.css'
 import { RiDeleteBin5Line } from 'react-icons/ri'
 import { PiHeartStraightLight } from 'react-icons/pi'
 import { AiOutlineDelete } from 'react-icons/ai'
+import { useNavigate } from 'react-router-dom'
 
 function Cart() {
+
+    const navigate = useNavigate();
+
     return (
         <section className={styles.main_cart_section}>
             <div className={styles.main_cart_parent}>
@@ -161,7 +165,7 @@ function Cart() {
                                 </div>
                             </div>
                             <div className={`${styles.checkout_details_row} ${styles.row4}`}>
-                                <button className={styles.checkout_button}>Go To Checkout</button>
+                                <button className={styles.checkout_button} onClick={() => { navigate('/checkout'); }}>Go To Checkout</button>
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,74 @@
+.mainContainer {
+    width: 100%;
+    padding: 48px;
+}
+
+.container {
+    max-width: 100rem;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+}
+
+.firstContainer {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 30px;
+}
+
+.secondContainer {
+    flex: 4;
+    border-left: 1px solid rgb(225, 225, 225);
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    gap: 30px;
+}
+
+.address,
+.contact,
+.payment {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.address>h1,
+.contact>h1,
+.payment>h1 {
+    font-size: 20px;
+}
+
+.inputsContainer {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.inputContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer>label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.inputContainer>input {
+    font-size: 15px;
+    padding: 15px 10px 10px;
+    max-width: 450px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+@media screen and (max-width: 1200px) {
+    .mainContainer {
+        padding: 48px 24px;
+    }
+}
