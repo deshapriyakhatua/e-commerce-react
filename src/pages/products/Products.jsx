@@ -65,13 +65,13 @@ function Products() {
                                 </div>
                                 <div className={styles.filter__item}>
                                     <div className={styles.filter__item__radio}><input type="radio" id={styles.Men} name="category" /><label
-                                        for="Men">Men</label></div>
+                                        htmlFor="Men">Men</label></div>
                                     <div className={styles.filter__item__radio}><input type="radio" id={styles.Women} name="category" /><label
-                                        for="Women">Women</label></div>
+                                        htmlFor="Women">Women</label></div>
                                     <div className={styles.filter__item__radio}><input type="radio" id={styles.Kids} name="category" /><label
-                                        for="Kids">Kids</label></div>
+                                        htmlFor="Kids">Kids</label></div>
                                     <div className={styles.filter__item__radio}><input type="radio" id={styles.Girls} name="category" /><label
-                                        for="Girls">Girls</label></div>
+                                        htmlFor="Girls">Girls</label></div>
                                 </div>
                             </div>
 
@@ -81,29 +81,29 @@ function Products() {
                                 </div>
                                 <div className={styles.filter__item}>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" id={styles.Nike} value="Nike" /><label
-                                        for="[object Object]">Nike<span className={styles.filter__item__checkbox__count}>
+                                        htmlFor="[object Object]">Nike<span className={styles.filter__item__checkbox__count}>
                                             (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" id={styles.Puma} value="Puma" /><label
-                                        for="[object Object]">Puma<span className={styles.filter__item__checkbox__count}>
+                                        htmlFor="[object Object]">Puma<span className={styles.filter__item__checkbox__count}>
                                             (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" id={styles.Adidas}
-                                        value="Adidas" /><label for="[object Object]">Adidas<span
+                                        value="Adidas" /><label htmlFor="[object Object]">Adidas<span
                                             className={styles.filter__item__checkbox__count}>
                                             (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" id={styles.LeeCooper}
-                                        value="Lee Cooper" /><label for="[object Object]">Lee Cooper<span
+                                        value="Lee Cooper" /><label htmlFor="[object Object]">Lee Cooper<span
                                             className={styles.filter__item__checkbox__count}>
                                             (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" id={styles.Reebok}
-                                        value="Reebok" /><label for="[object Object]">Reebok<span
+                                        value="Reebok" /><label htmlFor="[object Object]">Reebok<span
                                             className={styles.filter__item__checkbox__count}>
                                             (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" id={styles.Roadster}
-                                        value="Roadster" /><label for="[object Object]">Roadster<span
+                                        value="Roadster" /><label htmlFor="[object Object]">Roadster<span
                                             className={styles.filter__item__checkbox__count}>
                                             (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" id={styles.Arrow}
-                                        value="Arrow" /><label for="[object Object]">Arrow<span
+                                        value="Arrow" /><label htmlFor="[object Object]">Arrow<span
                                             className={styles.filter__item__checkbox__count}>
                                             (100)</span></label></div>
                                     <div className={styles.filter__item__more}><button>+8 more</button></div>
@@ -116,27 +116,27 @@ function Products() {
                                 </div>
                                 <div className={styles.filter__item}>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" name="price"
-                                        value="500 1000" /><label for="500 1000">Rs. 500 to Rs.
+                                        value="500 1000" /><label htmlFor="500 1000">Rs. 500 to Rs.
                                             1000<span className={styles.filter__item__checkbox__count}>
                                                 (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" name="price"
-                                        value="1000 2000" /><label for="1000 2000">Rs. 1000 to Rs.
+                                        value="1000 2000" /><label htmlFor="1000 2000">Rs. 1000 to Rs.
                                             2000<span className={styles.filter__item__checkbox__count}>
                                                 (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" name="price"
-                                        value="2000 5000" /><label for="2000 5000">Rs. 2000 to Rs.
+                                        value="2000 5000" /><label htmlFor="2000 5000">Rs. 2000 to Rs.
                                             5000<span className={styles.filter__item__checkbox__count}>
                                                 (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" name="price"
-                                        value="5000 10000" /><label for="5000 10000">Rs. 5000 to Rs.
+                                        value="5000 10000" /><label htmlFor="5000 10000">Rs. 5000 to Rs.
                                             10000<span className={styles.filter__item__checkbox__count}>
                                                 (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" name="price"
-                                        value="10000 20000" /><label for="10000 20000">Rs. 10000 to Rs.
+                                        value="10000 20000" /><label htmlFor="10000 20000">Rs. 10000 to Rs.
                                             20000<span className={styles.filter__item__checkbox__count}>
                                                 (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" name="price"
-                                        value="20000 50000" /><label for="20000 50000">Rs. 20000 to Rs.
+                                        value="20000 50000" /><label htmlFor="20000 50000">Rs. 20000 to Rs.
                                             50000<span className={styles.filter__item__checkbox__count}>
                                                 (100)</span></label></div>
                                     <div className={styles.filter__item__more}><button>+-1 more</button></div>
@@ -151,37 +151,37 @@ function Products() {
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" id={styles.Black} name="color"
                                         value="Black" /><span
                                             style={{ width: '15px', height: '15px', borderRadius: '50%', backgroundColor: 'Black', display: 'inline-block', border: '1px solid #eaeaea' }}></span><label
-                                                for="[object Object]">Black<span className={styles.filter__item__checkbox__count}>
+                                                htmlFor="[object Object]">Black<span className={styles.filter__item__checkbox__count}>
                                                 (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" id={styles.White} name="color"
                                         value="White" /><span
                                             style={{ width: '15px', height: '15px', borderRadius: '50%', backgroundColor: 'White', display: 'inline-block', border: '1px solid #eaeaea' }}></span><label
-                                                for="[object Object]">White<span className={styles.filter__item__checkbox__count}>
+                                                htmlFor="[object Object]">White<span className={styles.filter__item__checkbox__count}>
                                                 (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" id={styles.Red} name="color"
                                         value="Red" /><span
                                             style={{ width: '15px', height: '15px', borderRadius: '50%', backgroundColor: 'red', display: 'inline-block', border: '1px solid #eaeaea' }}></span><label
-                                                for="[object Object]">Red<span className={styles.filter__item__checkbox__count}>
+                                                htmlFor="[object Object]">Red<span className={styles.filter__item__checkbox__count}>
                                                 (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" id={styles.Blue} name="color"
                                         value="Blue" /><span
                                             style={{ width: '15px', height: '15px', borderRadius: '50%', backgroundColor: 'blue', display: 'inline-block', border: '1px solid #eaeaea' }}></span><label
-                                                for="[object Object]">Blue<span className={styles.filter__item__checkbox__count}>
+                                                htmlFor="[object Object]">Blue<span className={styles.filter__item__checkbox__count}>
                                                 (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" id={styles.Green} name="color"
                                         value="Green" /><span
                                             style={{ width: '15px', height: '15px', borderRadius: '50%', backgroundColor: 'green', display: 'inline-block', border: '1px solid #eaeaea' }}></span><label
-                                                for="[object Object]">Green<span className={styles.filter__item__checkbox__count}>
+                                                htmlFor="[object Object]">Green<span className={styles.filter__item__checkbox__count}>
                                                 (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" id={styles.Yellow} name="color"
                                         value="Yellow" /><span
                                             style={{ width: '15px', height: '15px', borderRadius: '50%', backgroundColor: 'yellow', display: 'inline-block', border: '1px solid #eaeaea' }}></span><label
-                                                for="[object Object]">Yellow<span className={styles.filter__item__checkbox__count}>
+                                                htmlFor="[object Object]">Yellow<span className={styles.filter__item__checkbox__count}>
                                                 (100)</span></label></div>
                                     <div className={styles.filter__item__checkbox}><input type="checkbox" id={styles.Pink} name="color"
                                         value="Pink" /><span
                                             style={{ width: '15px', height: '15px', borderRadius: '50%', backgroundColor: 'pink', display: 'inline-block', border: '1px solid #eaeaea' }}></span><label
-                                                for="[object Object]">Pink<span className={styles.filter__item__checkbox__count}>
+                                                htmlFor="[object Object]">Pink<span className={styles.filter__item__checkbox__count}>
                                                 (100)</span></label></div>
                                     <div className={styles.filter__item__more}><button>+3 more</button></div>
                                 </div>
@@ -193,19 +193,19 @@ function Products() {
                                 </div>
                                 <div className={styles.filter__item}>
                                     <div className={styles.filter__item__radio}><input type="radio" name="discount" /><label
-                                        for="10%">10% and above</label></div>
+                                        htmlFor="10%">10% and above</label></div>
                                     <div className={styles.filter__item__radio}><input type="radio" name="discount" /><label
-                                        for="20%">20% and above</label></div>
+                                        htmlFor="20%">20% and above</label></div>
                                     <div className={styles.filter__item__radio}><input type="radio" name="discount" /><label
-                                        for="30%">30% and above</label></div>
+                                        htmlFor="30%">30% and above</label></div>
                                     <div className={styles.filter__item__radio}><input type="radio" name="discount" /><label
-                                        for="40%">40% and above</label></div>
+                                        htmlFor="40%">40% and above</label></div>
                                     <div className={styles.filter__item__radio}><input type="radio" name="discount" /><label
-                                        for="50%">50% and above</label></div>
+                                        htmlFor="50%">50% and above</label></div>
                                     <div className={styles.filter__item__radio}><input type="radio" name="discount" /><label
-                                        for="60%">60% and above</label></div>
+                                        htmlFor="60%">60% and above</label></div>
                                     <div className={styles.filter__item__radio}><input type="radio" name="discount" /><label
-                                        for="70%">70% and above</label></div>
+                                        htmlFor="70%">70% and above</label></div>
                                     <div className={styles.filter__item__more}><button>+2 more</button></div>
                                 </div>
                             </div>
@@ -236,8 +236,8 @@ function Products() {
             </div>
             <div className={styles.main_products_parent}>
                 <div className={styles.main_product}>
-                    {productImages && productImages.map((element) => (
-                        <div className={styles.product__card} onClick={() => {window.location = './product'}}>
+                    {productImages && productImages.map((element, indx) => (
+                        <div className={styles.product__card} onClick={() => {window.location = './product'}} key={indx}>
                             <div className={styles.product__image}>
                                 <img src={element?.url} alt="Men Pack Of 2 Sustainable Shirts" className={styles.product_main_img} />
                                 <div className={styles.product__rating}>

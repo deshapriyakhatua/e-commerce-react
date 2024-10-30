@@ -10,6 +10,10 @@ import Footer from './components/footer/Footer'
 import Products from './pages/products/Products'
 import Cart from './pages/cart/Cart'
 import Checkout from './pages/checkout/Checkout'
+import ReturnPolicy from './pages/returnPolicy/ReturnPolicy'
+import DeliveryPolicy from './pages/deliveryPolicy/DeliveryPolicy'
+import TermsAndConditions from './pages/termsAndConditions/TermsAndConditions'
+import PrivacyPolicy from './pages/privacyPolicy/PrivacyPolicy'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -32,8 +36,11 @@ function App() {
           <Route exact path="/products" name="Products" element={<Products />} />
           <Route exact path="/cart" name="Cart" element={<Cart />} />
           <Route exact path="/checkout" name="Checkout" element={<Checkout />} />
-          {/* <Route exact path="/about" name="About" element={<About />} />
-          <Route exact path="/contact" name="Contact" element={<Contact />} />
+          <Route exact path="/return-policy" name="ReturnPolicy" element={<ReturnPolicy />} />
+          <Route exact path="/delivery-policy" name="DeliveryPolicy" element={<DeliveryPolicy />} />
+          <Route exact path="/terms-and-conditions" name="TermsAndConditions" element={<TermsAndConditions />} />
+          <Route exact path="/privacy-policy" name="PrivacyPolicy" element={<PrivacyPolicy />} />
+          {/* <Route exact path="/contact" name="Contact" element={<Contact />} />
           <Route exact path="/admin" name="Login" element={<Auth />} />
           <Route exact path="/terms-and-conditions" name="Page 500" element={<TermsAndConditions />} />
           <Route path="/service/:serviceTypeParam/:locationParam" element={<Service/>} />
