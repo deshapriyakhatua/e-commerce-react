@@ -14,6 +14,7 @@ import ReturnPolicy from './pages/returnPolicy/ReturnPolicy'
 import DeliveryPolicy from './pages/deliveryPolicy/DeliveryPolicy'
 import TermsAndConditions from './pages/termsAndConditions/TermsAndConditions'
 import PrivacyPolicy from './pages/privacyPolicy/PrivacyPolicy'
+import Error404 from './pages/Error404/Error404'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -44,8 +45,8 @@ function App() {
           <Route exact path="/admin" name="Login" element={<Auth />} />
           <Route exact path="/terms-and-conditions" name="Page 500" element={<TermsAndConditions />} />
           <Route path="/service/:serviceTypeParam/:locationParam" element={<Service/>} />
-          <Route exact path="/500" name="Page 500" element={<Page500 />} />
-          <Route exact path="/*" name="Page 404" element={<Page404 />} /> */}
+          <Route exact path="/500" name="Page 500" element={<Page500 />} />*/}
+          <Route exact path="/*" name="Error 404" element={<Error404 />} /> 
         </Routes>
       </Suspense>
 
