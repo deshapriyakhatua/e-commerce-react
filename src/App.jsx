@@ -16,6 +16,8 @@ import TermsAndConditions from './pages/termsAndConditions/TermsAndConditions'
 import PrivacyPolicy from './pages/privacyPolicy/PrivacyPolicy'
 import Error404 from './pages/Error404/Error404'
 import ContactUs from './pages/contactUs/ContactUs'
+import AboutUs from './pages/aboutUs/AboutUs'
+import FAQ from './pages/fAQ/FAQ'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -39,6 +41,8 @@ function App() {
           <Route exact path="/cart" name="Cart" element={<Cart />} />
           <Route exact path="/checkout" name="Checkout" element={<Checkout />} />
           <Route exact path="/contact-us" name="ContactUs" element={<ContactUs />} />
+          <Route exact path="/about-us" name="AboutUs" element={<AboutUs />} />
+          <Route exact path="/faq" name="FAQ" element={<FAQ />} />
           <Route exact path="/terms-and-conditions" name="TermsAndConditions" element={<TermsAndConditions />} />
           <Route exact path="/privacy-policy" name="PrivacyPolicy" element={<PrivacyPolicy />} />
           <Route exact path="/delivery-policy" name="DeliveryPolicy" element={<DeliveryPolicy />} />

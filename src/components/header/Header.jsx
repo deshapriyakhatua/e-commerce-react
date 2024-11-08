@@ -130,16 +130,18 @@ function Header() {
                 {
                     groupTitle: 'About us',
                     items: [
-                        { name: 'About us', link: '#' },
-                        { name: 'Support', link: '#' },
-                        { name: 'Contact us', link: '#' }
+                        { name: 'About us', link: '/about-us' },
+                        { name: 'FAQ', link: '/faq' },
+                        { name: 'Contact us', link: '/contact-us' }
                     ]
                 },
                 {
                     groupTitle: 'Safety and quality',
                     items: [
-                        { name: 'Cookie settings', link: '#' },
-                        { name: 'Privacy Policy', link: '#' }
+                        { name: 'Terms & Conditions', link: '/terms-and-conditions' },
+                        { name: 'Delivery Policy', link: '/delivery-policy' },
+                        { name: 'Return Policy', link: '/return-policy' },
+                        { name: 'Privacy Policy', link: '/privacy-policy' }
                     ]
                 }
             ]
