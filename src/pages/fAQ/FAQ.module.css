@@ -1,0 +1,17 @@
+.mainPage {
+    width: 100%;
+    padding: 48px;
+}
+.mainContainer {
+    max-width: 100rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+@media screen and (max-width: 1200px) {
+    .mainPage {
+        padding: 48px 24px;
+    }
+}

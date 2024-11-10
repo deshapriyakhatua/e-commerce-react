@@ -18,6 +18,7 @@ import Error404 from './pages/Error404/Error404'
 import ContactUs from './pages/contactUs/ContactUs'
 import AboutUs from './pages/aboutUs/AboutUs'
 import FAQ from './pages/fAQ/FAQ'
+import Blog from './pages/blog/Blog'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -47,8 +48,8 @@ function App() {
           <Route exact path="/privacy-policy" name="PrivacyPolicy" element={<PrivacyPolicy />} />
           <Route exact path="/delivery-policy" name="DeliveryPolicy" element={<DeliveryPolicy />} />
           <Route exact path="/return-policy" name="ReturnPolicy" element={<ReturnPolicy />} />
-          {/* <Route exact path="/admin" name="Login" element={<Auth />} />
-          <Route exact path="/terms-and-conditions" name="Page 500" element={<TermsAndConditions />} />
+          <Route exact path="/blog" name="Blog" element={<Blog />} />
+          {/* <Route exact path="/terms-and-conditions" name="Page 500" element={<TermsAndConditions />} />
           <Route path="/service/:serviceTypeParam/:locationParam" element={<Service/>} />
           <Route exact path="/500" name="Page 500" element={<Page500 />} />*/}
           <Route exact path="/*" name="Error 404" element={<Error404 />} /> 

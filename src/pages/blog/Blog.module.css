@@ -1,0 +1,27 @@
+.mainBlogBody {
+    width: 100%;
+    padding: 50px 0;
+}
+
+.sectionContainer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1350px) {
+    .sectionContainer {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .sectionContainer {
+        width: 95%;
+    }
+}
+@media screen and (max-width: 1036px) {
+    .sectionContainer {
+        flex-direction: column;
+    }
+}
